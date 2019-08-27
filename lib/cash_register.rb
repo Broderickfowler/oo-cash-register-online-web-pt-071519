@@ -14,7 +14,7 @@ class CashRegister
       @items << title 
     end
     @total += price * quantity
-    #@runninng_totals << @total
+   
     @transaction << {quantity: quantity, 
     amount: price * quantity}
   end
@@ -29,7 +29,7 @@ class CashRegister
   end
   
   def void_last_transaction
-    #@@runninng_totals.pop
+    
     last_transaction = @transaction.pop
     @total -= last_transaction[:amount]
     last_transaction[:quantity].times do
